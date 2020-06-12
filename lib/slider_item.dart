@@ -8,6 +8,7 @@ class SliderItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // decoration: BoxDecoration(color: Colors.red),
       width: double.infinity,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,14 +41,14 @@ final sliderlists = [
   SliderItem(
     title: "Browse",
     desc:
-        "Listen to unlimited music without interruptions. Join Spotify now for free",
+        "Listen to unlimited music \nwithout interruptions. Join Spotify now for free",
   ),
   SliderItem(
     title: "Playlist",
-    desc: "Listen to playlists made for you.\nListen for free on demand ",
+    desc: "Listen to playlists made for you.\nListen for free on demand  ",
   ),
   SliderItem(
     title: "Artists",
-    desc: "Follow your favorite artists \nfor new album drops",
+    desc: "Follow your favorite artists \n with for new songs and album drops",
   )
 ];

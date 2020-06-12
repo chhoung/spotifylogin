@@ -90,12 +90,15 @@ class _MainScreenState extends State<MainScreen> {
                       CarouselSlider(
                         items: sliderlists,
                         options: CarouselOptions(
+                          viewportFraction: 1,
                           initialPage: 0,
                           height: 100,
                           enableInfiniteScroll: true,
-                          // autoPlayInterval: Duration(seconds: 3),
-                          // autoPlayAnimationDuration: Duration(milliseconds: 800),
-                          // autoPlayCurve: Curves.fastOutSlowIn,
+                          autoPlay: true,
+                          autoPlayInterval: Duration(seconds: 3),
+                          autoPlayAnimationDuration:
+                              Duration(milliseconds: 800),
+                          autoPlayCurve: Curves.fastOutSlowIn,
                           enlargeCenterPage: true,
                           carouselController: _pageController,
                           onPageChanged: (index, reason) {
@@ -148,7 +151,12 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 5.0),
-                    child: Text('Already a user?'),
+                    child: GestureDetector(
+                      onTap: () => print("test"),
+                      child: Text(
+                        'Already a user?',
+                      ),
+                    ),
                   ),
                   RaisedButton(
                     //hoverColor: Colors.grey,
