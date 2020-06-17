@@ -1,9 +1,8 @@
 import 'dart:ui';
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:spotifylogin/rounded_button.dart';
-import 'package:spotifylogin/slider_item.dart';
+import 'components/login_button.dart';
+import 'components/slider_item.dart';
 
 void main() {
   runApp(MyApp());
@@ -122,29 +121,10 @@ class _MainScreenState extends State<MainScreen> {
                   SizedBox(
                     height: 30,
                   ),
-                  RaisedButton(
-                    elevation: 0,
-                    color: Colors.green,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                    padding: EdgeInsets.all(18.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          'CREATE ACCOUNT',
-                          style: new TextStyle(
-                            fontSize: 15.0,
-                            fontWeight: FontWeight.w800,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                    onPressed: () {
-                      //_persistFormData();
-                    },
+                  LoginButton(
+                    backgroundColor: Colors.green,
+                    text: 'CREATE ACCOUNT',
+                    textColor: Colors.white,
                   ),
                   SizedBox(
                     height: 15.0,
@@ -158,31 +138,11 @@ class _MainScreenState extends State<MainScreen> {
                       ),
                     ),
                   ),
-                  RaisedButton(
-                    //hoverColor: Colors.grey,
-                    splashColor: Colors.grey[100],
-                    elevation: 2,
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                    padding: EdgeInsets.all(18.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          'LOG IN',
-                          style: new TextStyle(
-                            fontSize: 15.0,
-                            fontWeight: FontWeight.w800,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ],
-                    ),
-                    onPressed: () {
-                      print('pressed');
-                    },
+                  LoginButton(
+                    backgroundColor: Colors.white,
+                    text: 'LOG IN',
+                    textColor: Colors.black,
+                    spashColor: Colors.grey[100],
                   ),
                 ],
               ),

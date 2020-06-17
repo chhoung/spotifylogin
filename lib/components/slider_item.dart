@@ -39,6 +39,11 @@ class SliderItem extends StatelessWidget {
 
 final sliderlists = [
   SliderItem(
+    title: "ស្វែងរក",
+    desc:
+        "ស្តាប់បទចម្រៀងជាច្រើន ដោយគ្មានការរំខាន ។ \nប្រើប្រាស់ Spotify ឥឡូវនេះ free",
+  ),
+  SliderItem(
     title: "Browse",
     desc:
         "Listen to unlimited music \nwithout interruptions. Join Spotify now for free",
