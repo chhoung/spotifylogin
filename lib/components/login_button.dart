@@ -5,6 +5,7 @@ class LoginButton extends StatelessWidget {
   final String text;
   final Color textColor;
   final Color spashColor;
+  final Function onPressed;
 
   const LoginButton({
     Key key,
@@ -12,6 +13,7 @@ class LoginButton extends StatelessWidget {
     this.text,
     this.textColor,
     this.spashColor,
+    this.onPressed,
   }) : super(key: key);
 
   @override
@@ -38,9 +40,7 @@ class LoginButton extends StatelessWidget {
           ),
         ],
       ),
-      onPressed: () {
-        print('pressed');
-      },
+      onPressed: onPressed,
     );
   }
 }
