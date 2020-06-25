@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:spotifylogin/screens/library.dart';
+import 'package:spotifylogin/screens/search.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -8,17 +10,15 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
 
-  static const List<Widget> _screenOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-    ),
-    Text(
-      'Index 1: Search',
-    ),
-    Text(
-      'Index 2: Your Library',
-    ),
-  ];
+  List<Widget> _screenOptions = List<Widget>();
+
+  @override
+  void initState() {
+    super.initState();
+    _screenOptions.add(FlutterLogo());
+    _screenOptions.add(SearchScreen());
+    _screenOptions.add(LibraryScreen());
+  }
 
   void _onItemTapped(int index) {
     setState(() {
